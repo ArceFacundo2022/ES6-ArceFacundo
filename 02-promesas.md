@@ -27,7 +27,8 @@ const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, mili
 function obtenerPcias() {
     await retrasar(1800);
 
-    const consulta = fetch('');
+    const consulta = fetch();
+
 }
 
 // Función que retorna los datos de departamentos
@@ -58,7 +59,6 @@ function consultarDatos() {
     console.log(localidades);
 }
 
-consultarDatos();
-
+consultarDatos()
 
 ```

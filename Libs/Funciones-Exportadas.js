@@ -1,7 +1,7 @@
-const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
+export const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
 
 // Función que retorna los datos de provincias
-const obtenerPcias = async (provi = "") => {
+export const obtenerPcias = async (provi = "") => {
   try {
     provincia.trim()
         ? provincia =`?nombre=${provincia}&`
@@ -24,7 +24,7 @@ const obtenerPcias = async (provi = "") => {
 //    .catch((error) => console.log(error))
 
 //Función que retorna los datos de departamentos
-const obtenerDptos = async (Dpto = "") => {
+export const obtenerDptos = async (Dpto = "") => {
   try {
     Dpto.trim()
     ? Dpto =`?nombre=${Dpto}&`
@@ -43,7 +43,7 @@ const obtenerDptos = async (Dpto = "") => {
 }
 
 //Función que retorna los datos de localidades
-const obtenerLocalidades = async (Loca = "") => {
+export const obtenerLocalidades = async (Loca = "") => {
   try{
     Loca.trim()
     ? Loca =`?nombre=${Loca}&`
@@ -65,7 +65,7 @@ const obtenerLocalidades = async (Loca = "") => {
 
 
 // Funcion para obtener todos los datos
-const consultarDatos = async () => {
+export const consultarDatos = async () => {
   try{
     const provincias = obtenerPcias();
     const dptos = obtenerDptos();
@@ -79,6 +79,17 @@ const consultarDatos = async () => {
   }
 }
 
-consultarDatos()
-  .then(respuesta => console.log(respuesta))
-  .catch(error => console.log(error))
+// consultarDatos()
+//   .then(respuesta => console.log(respuesta))
+//   .catch(error => console.log(error))
+
+// Module.export = {consultarDatos, obtenerDptos, obtenerLocalidades, obtenerPcias, retrasar}
+
+// export default Modulo = {
+//     consultarDatos,
+//     obtenerLocalidades,
+//     obtenerPcias,
+//     obtenerDptos,
+//     retrasar
+// }
+
